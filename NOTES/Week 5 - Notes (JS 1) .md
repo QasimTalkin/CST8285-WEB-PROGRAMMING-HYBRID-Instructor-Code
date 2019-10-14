@@ -197,4 +197,109 @@ function say_hello(){
     alert("Hello " + user_name);
 }
 </script>
-<input type = "button" name="hello_btn" value="click me" id="hello_btn" onlclick="say_hello();">
+<input type = "button" name="hello_btn" value="click me" id="hello_btn" onclick="say_hello();">
+```
+
+### Document Object Model 
+*  DOM is web programing acts as a link between programing and we pages. 
+*  HTML element are treated as objects 
+*  DOM contains all the elements of the page when loaded into the browser.
+*  HTML 
+   *  elements
+   *  attributes
+   *  comments 
+are all sub nodes of the document object they exists in. 
+
+#### Some Key DOM properties 
+  * document.cookie  - Returns the document's cookie
+  * document.images - Returns all ```<img>``` elements
+  * document.title - Returns the ```<title>``` element
+  * document.URL - 	Returns the complete URL of the document
+  * document.anchors -	Returns all ```<a>``` elements that have a name attribute
+  * document.forms -	Returns all ```<form>``` elements
+
+#### Some Key DOM Methods
+  * document.getElementById("Qasim")  - Returns the element with the id "Qasim"
+  * document.write("Qasim") - Writes "Qasim" into output. 
+  * document.getElementByTagName("LI") - Get all elements in the document with the specified tag name "LI"
+  * document.createElement()- 	Returns the complete URL of the document
+```js
+var btn = document.createElement("BUTTON");
+  btn.innerHTML= "Qasim";
+  btn.id = "Qasimbtn";
+```
+ *  All types of elements have shared properties and methods for example 
+>element.childNodes
+will return  all the nodesList contains child nodes. can be accessed using element.childnode[3]
+* Node list contains list of all child nodes can be looped using for loop.
+  
+#### key element object properties. 
+  * element.attributes - Returns all attribute nodes registered to the specified node
+  * element.id - sets or returns the id of the element. 
+  * document.innerHTML - sets or returns the contents of the element. 
+  * document.className - sets or returns the contents of the element. useful in applying css style dynamically. 
+  #### key element object Methods 
+  * element.setAttribute() - Returns all attribute nodes registered to the specified node
+    * >element.setAttribute("style", "background-color: red;");
+  * element.clodeNode() -Clones an element 
+    * >var cln = itm.cloneNode(true);
+  * element.appendChild() - appends a new node before specified child. 
+    * > document.getElementById("myList1").appendChild(cln); 
+  * document.removeChild - removes a specific child node.
+    * > document.getElementById("myList1").removeChild(cln); 
+
+#### The attribute object
+
+* used to edit HTML attributes
+* attributes are returned in a namedNodeList. 
+* namedNodeList can access attributes by index or by name. 
+  * element.attribute.name - returns the name of att
+  * attribute.value - sets or returns the value of att 
+  * attribute.specified - returns true if the attribute is specified.
+
+### Events
+* registers events.
+  * Mosue events
+    * onclick
+    * onmouseup
+    * onmousedown
+  * Fram/object events
+    * onload 
+    * onerror
+    * onabort
+  * foram event 
+    * onchange
+    * onfocus
+    * onsubmit
+* usually used in conjunction with a function. 
+  * > document.forms[“myForm”].onsubmit= validateForm();will call the validateForm() method when the form is submitted.
+
+
+#### The input text object. 
+
+* some elements have their own objects (attributes)
+* for example input text element has 
+  * properties like
+    * value - returns or sets teh value of text box 
+    * maxlength - returns or sets the size of textbox in characters 
+    * size - returns sixe of the textbox. 
+  * Methods 
+    * select () - slects the size of the textbox. 
+* The input radio/checkbox 
+  * properties 
+    * checked - returns or sets bool value. 
+    * value - returns or sets the value.
+#### Javascript Arrays
+*   multiple values in one object. 
+    * Properties 
+      * length
+    * methods
+      * sort()
+      * push() - adds a new element onto the end of array
+      * concat() -  joins two arrays
+    * Constructor
+      * > var newArray = new Array();
+    * literal 
+      * > var newArray = ["item1", "item2"];
+    * condensed  
+      * var newArray = new Array("item1", "item2");
